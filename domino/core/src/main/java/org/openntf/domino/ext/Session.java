@@ -80,7 +80,14 @@ public interface Session {
 		 * Hex values such as replicaid, unid and noteid are forced to lower case before being returned
 		 *
 		 */
-		FORCE_HEX_LOWER_CASE;
+		FORCE_HEX_LOWER_CASE,
+
+		/**
+		 *
+		 * Prevent use of getNthDocument. False by default because repeat controls etc need to use getNthDocument to get starting point
+		 *
+		 */
+		BLOCK_NTH_DOCUMENT(false);
 
 		private final boolean khan_;
 
@@ -430,14 +437,14 @@ public interface Session {
 	/**
 	 * Gets a document by its {@link org.openntf.domino.Document#getMetaversalID(String)} property
 	 *
-	 * @param metaversalID
-	 *            String comprising replicaid + UNID
 	 * @param serverName
 	 *            String server name
+	 * @param metaversalID
+	 *            String comprising replicaid + UNID
 	 * @return Document
 	 * @since org.openntf.domino 5.0.0
 	 */
-	public org.openntf.domino.Document getDocumentByMetaversalID(String metaversalID, String serverName);
+	public org.openntf.domino.Document getDocumentByMetaversalID(String serverName, String metaversalID);
 
 	/**
 	 * Checks the Session's mechanism for converting mime, using {@link org.openntf.domino.AutoMime}

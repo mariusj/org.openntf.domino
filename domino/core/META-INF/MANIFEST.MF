@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: OpenNTF Domino API Core
 Bundle-SymbolicName: org.openntf.domino;singleton:=true
-Bundle-Version: 3.1.0.qualifier
+Bundle-Version: 3.2.0.qualifier
 Bundle-Vendor: OpenNTF
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Export-Package: org.openntf.arpa,
@@ -22,6 +22,8 @@ Export-Package: org.openntf.arpa,
  org.openntf.domino.ext,
  org.openntf.domino.extmgr,
  org.openntf.domino.extmgr.events,
+ org.openntf.domino.extmgr.events.database,
+ org.openntf.domino.extmgr.events.document,
  org.openntf.domino.formula,
  org.openntf.domino.graph,
  org.openntf.domino.graph2,
